@@ -1,0 +1,1206 @@
+/*
+ * Login: xkhoda01
+ *
+ * Doplnte sve reseni.
+ *
+ * Nezapomente pridat strucne hromadne komentare pro pravidla jednotlivych sekci
+ * a pro netrivialni useky kodu.
+ *
+ * Snazte se dodat aspon castecne reseni, i snaha se hodnoti.
+ */
+
+body {
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  background: url("/img/bg/bg-body.svg");
+}
+
+header {
+  margin: 0;
+  display: grid;
+  order: 1;
+}
+
+main {
+  order: 3;
+}
+
+footer {
+  order: 4;
+}
+
+a {
+  order: 5;
+}
+
+#heyoooo {
+  order: 2;
+}
+
+#header-menu {
+  order: 1;
+}
+
+#header-title {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background: url("/img/bg/bg-header.jpg") no-repeat;
+  order: 0;
+  font-family: "Calistoga";
+  text-align: center;
+  text-shadow: 0 0 12px green;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes flyAndFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#header-title span:nth-child(1) {
+  text-transform: uppercase;
+  font-size: 100px;
+  margin-bottom: -20px;
+  animation: flyAndFadeIn 0.5s ease-in-out;
+}
+
+#header-title span:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 50px;
+  margin-bottom: -30px;
+  animation: flyAndFadeIn 0.7s ease-in-out;
+}
+
+@keyframes reset {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+html.scrolled #header-title span {
+  animation: reset 0.1s forwards;
+}
+
+#header-title span:nth-child(2)::before {
+  content: "";
+  background: url("/img/custom/flag.svg") no-repeat;
+  background-size: contain;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin-top: 10px;
+  animation: flyAndFadeIn 0.7s ease-in-out;
+}
+
+#header-title span:nth-child(2)::after {
+  content: "";
+  background: url("/img/custom/flag.svg") no-repeat;
+  background-size: contain;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  animation: flyAndFadeIn 0.7s ease-in-out;
+  transform: scaleX(-1);
+  margin-top: 10px;
+
+}
+
+#header-title span:nth-child(3) {
+  text-transform: uppercase;
+  font-size: 15px;
+  margin-bottom: 10px;
+  animation: flyAndFadeIn 0.8s ease-in-out;
+}
+
+#header-title span:nth-child(4) {
+  src: url("/fonts/textile.ttf") format("truetype");
+  font-family: "Textile";
+  font-size: 30px;
+  animation: flyAndFadeIn 0.9s ease-in-out;
+}
+
+#header-title span:nth-child(4)::before {
+  content: '"';
+}
+
+#header-title span:nth-child(4)::after {
+  content: '"';
+}
+
+header nav ul li:nth-child(3) {
+  padding-right: 40px;
+}
+
+header nav ul li:nth-child(4) {
+  padding-left: 40px;
+}
+
+header nav ul li a {
+  font-family: "Calistoga";
+  color: black;
+  text-decoration: none;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-transform: uppercase;
+  justify-content: center;
+}
+
+#heyoooo {
+  width: 0px;
+  height: 0px;
+}
+
+#heyoooo span {
+  font-size: 0px;
+}
+
+#heyoooo img {
+  width: 0px;
+  height: 0px;
+  size: 0px;
+  opacity: 0;
+}
+
+#header-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav {
+
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  position: absolute;
+  order: 1;
+  padding-top: 350px;
+}
+
+header nav::after {
+  content: "";
+  display: block;
+  background: url("/img/custom/leaf.svg") no-repeat;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+
+  transform: rotate(90deg) scaleX(-1) translateY(20%) translateX(20%) scale(1.2);
+
+  position: absolute;
+}
+
+header nav ul {
+  padding-left: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 15px;
+  margin: 0;
+  border-top: dashed 1px green;
+  border-bottom: dashed 1px green;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+header nav ul :hover {
+  color: green;
+  transition: 0.3s;
+}
+
+header nav ul li a {
+  transition: 0.3s;
+}
+
+#header-title {
+  z-index: -1;
+  background-size: cover;
+
+  padding-bottom: 300px;
+  margin-bottom: 50px;
+}
+
+header {
+  background: url(../img/custom/beers.png);
+  background-position: 150% 100%;
+  background-size: cover;
+  background-repeat: repeat-x;
+  background-size: auto;
+  overflow: visible;
+  padding-bottom: 100px;
+}
+
+#about {
+  z-index: -1;
+  margin-left: 130px;
+  margin-right: 130px;
+  background-color: white;
+  border-left: dashed 1px green;
+  border-right: dashed 1px green;
+  padding-top: 20px;
+
+}
+
+.heading {
+  padding-top: 150px;
+  padding-bottom: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.heading h2 {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 15px;
+  color: green;
+  font-family: "Calistoga";
+  text-align: center;
+  margin: 0;
+}
+
+.heading span {
+  font-size: 20px;
+  font-family: "Textile";
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+#about .video-player {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+#about .video-content {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+#about {
+  min-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 140px;
+}
+
+#about .name {
+  font-family: "Spectral";
+  font-style: italic;
+  padding-left: 230px;
+  font-size: 16px;
+  color: #333333;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+#about .references ul li a {
+  padding: 0;
+}
+
+#about .references ul {
+  justify-content: right;
+  padding-left: 230px;
+}
+
+#team .heading {
+  margin: 0px;
+}
+
+#team {
+  border: 50px solid;
+  box-sizing: border-box;
+  border-image: url("/img/custom/hr.svg");
+  border-image-slice: 100;
+  border-image-repeat: round;
+
+  border-left: 0px;
+  border-right: 0px;
+}
+
+#menu {
+  border: 50px solid;
+  box-sizing: border-box;
+  border-image: url("/img/custom/hr.svg");
+  border-image-slice: 100;
+  border-image-repeat: round;
+
+  border-left: 0px;
+  border-right: 0px;
+}
+
+
+#team {
+  background: url("/img/bg/bg-team.jpg");
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+#team .section-content {
+  margin-top: -220px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  border: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#team .section-content .section-item {
+  margin: 0;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  align-items: center;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid green;
+  background-color: white;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+#team .section-content .section-item:hover {
+  background-color: lightgreen;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+#team .section-content .section-item h3 {
+  font-family: "Calistoga";
+  text-align: center;
+  order: 2;
+}
+
+#team .section-content .section-item img {
+  display: block;
+  order: 1;
+  height: 300px;
+  width: 300px;
+  opacity: 0.8;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.3s;
+}
+
+#team .section-content .section-item:hover img {
+  display: block;
+  order: 1;
+  height: 320px;
+  width: 320px;
+  opacity: 1;
+  transition: 0.3s;
+  object-position: center;
+}
+
+.section-content .section-item .references {
+  order: 3;
+}
+
+.rating {
+  font-family: "Spectral";
+}
+
+#team .section-content .section-item p {
+  order: 4;
+  font-family: "Spectral";
+  text-align: center;
+}
+
+#team .heading {
+  display: block;
+  padding-top: 0px;
+  padding-bottom: 30px;
+}
+
+#team .heading h2 {
+  color: lightgreen;
+  display: block;
+  padding-top: 130px;
+}
+
+#team .heading span {
+  color: white;
+  display: block;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+#events {
+  background-color: white;
+  margin-left: 130px;
+  margin-right: 130px;
+  background-repeat: no-repeat;
+  border-left: dashed 1px green;
+  border-right: dashed 1px green;
+}
+
+#events .section-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#events .section-content .section-item {
+  display: grid;
+  grid-template-rows: minmax(10px, 50px) minmax(50px, 250px);
+  grid-template-columns: minmax(300px, 500px) 400px;
+  column-gap: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+  margin-left: 15px;
+  margin-right: 15px;
+  transition: all 0.3s;
+}
+
+#events .section-content .section-item:hover img {
+  opacity: 1;
+  transition: all 0.3s;
+  width: 103%;
+
+  height: 103%;
+}
+
+#events .section-content .section-item:hover h3 {
+  color: green;
+  transition: all 0.3s;
+}
+
+#events .section-content > :nth-child(2) {
+  display: grid;
+  grid-template-rows: minmax(10px, 50px) minmax(50px, 250px);
+  grid-template-columns: minmax(300px, 500px) 400px;
+  column-gap: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+  border-top: 1px dashed green;
+  border-bottom: 1px dashed green;
+}
+
+#events .section-content .section-item img {
+  opacity: 0.8;
+  transition: all 0.3s;
+
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 1;
+
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+#events .section-content .section-item p {
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 2;
+
+  font-family: "Spectral";
+  text-align: auto;
+  font-size: 10px;
+}
+
+#events .section-content .section-item h3 {
+  font-family: "Calistoga";
+  margin: 0;
+  transition: all 0.3s;
+
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+#events .section-content .section-item .events-props {
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+#events .section-content > :nth-child(2) img {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 2;
+
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+#events .section-content > :nth-child(2) p {
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 1;
+
+  font-family: "Spectral";
+  text-align: auto;
+  font-size: 10px;
+}
+
+#events .section-content > :nth-child(2) h3 {
+  margin: 0;
+
+  text-align: right;
+
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+#events .section-content > :nth-child(2) .events-props {
+  text-align: right;
+  align-items: right;
+  justify-content: right;
+
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.events-props {
+  display: flex;
+  margin-top: 30px;
+}
+
+#menu h3 a {
+  font-family: "Calistoga";
+  text-decoration: none;
+  font-style: normal;
+  text-align: center;
+  color: black;
+  margin: 0;
+  font-size: 15px;
+}
+
+#menu {
+  background: url("/img/bg/bg-menu.jpg");
+  background-size: contain;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#menu .section-content {
+  display: grid;
+
+  grid-template-rows: repeat(4, 200px);
+  grid-template-columns: repeat(4, 200px);
+  justify-content: center;
+}
+
+#menu img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  max-width: 400px;
+  object-fit: cover;
+  object-position: center;
+}
+
+#menu .heading {
+  padding-top: 100px;
+  margin-top: 0px;
+}
+
+#events .heading {
+  padding-top: 30px;
+}
+
+#menu span {
+  font-family: "Spectral";
+}
+
+.section-content .section-item .description span::before {
+  content: "$";
+  font-family: "Spectral";
+  text-decoration: none;
+}
+
+#menu h3 a ::before {
+  content: "";
+}
+
+#menu .heading h2 {
+  color: lightgreen;
+  display: block;
+  padding: 0px;
+}
+
+#menu .heading span {
+  color: white;
+  display: block;
+  padding-top: 0px;
+  margin-top: 0px;
+  font-family: "Textile";
+}
+
+#menu .section-content {
+  border: 20px white solid;
+}
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 150px;
+}
+
+#menu .section-item {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  grid-template-rows: 200px;
+}
+
+#menu .section-content :nth-child(1) .section-item {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  grid-template-rows: 200px;
+  grid-row: 1;
+  grid-column: 1 / span 2;
+}
+
+#menu .section-content :nth-child(1) img {
+  grid-column: 1;
+}
+
+#menu .section-content :nth-child(1) .description {
+  display: flex;
+  flex-direction: column;
+
+  background-color: #cce6c2;
+
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#menu .section-content > :nth-child(1) img ::before {
+  content: "";
+  border-top: 100px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 20px solid green;
+}
+
+#menu .section-content :nth-child(2) {
+  grid-template-rows: repeat(2, 200px);
+  grid-template-columns: 200px;
+  grid-row: 2;
+  grid-column: 1 / span 2;
+}
+
+#menu .section-content :nth-child(2) img {
+  grid-row: 2;
+}
+
+#menu .section-content :nth-child(2) .description {
+  display: flex;
+  flex-direction: column;
+
+  background-color: white;
+
+  grid-column: 1;
+  grid-row: 1;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu .section-content :nth-child(3) {
+  grid-template-columns: repeat(2, 200px);
+  grid-template-rows: repeat(2, 200px);
+  grid-row: 3 / span 4;
+  grid-column: 3 / span 4;
+}
+
+#menu .section-content :nth-child(3) img :nth-child(1) {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+#menu .section-content :nth-child(3) .description {
+  background-color: #cce6c2;
+
+  grid-column: 2;
+  grid-row: 1 / span 2;
+
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu .section-content :nth-child(4) {
+  grid-template-rows: repeat(2, 200px);
+  grid-template-columns: 200px;
+  grid-row: 2;
+  grid-column: 2 / span 3;
+}
+
+#menu .section-content :nth-child(4) img {
+  grid-column: 2;
+}
+
+#menu .section-content :nth-child(4) .description {
+  display: flex;
+  flex-direction: column;
+
+  background-color: lightpink;
+
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#menu .section-content :nth-child(5) {
+  grid-template-rows: repeat(2, 200px);
+  grid-template-columns: 200px;
+  grid-row: 1;
+  grid-column: 3 / span 4;
+}
+
+#menu .section-content :nth-child(5) img {
+  grid-column: 1;
+}
+
+#menu .section-content :nth-child(5) .description {
+  display: flex;
+  flex-direction: column;
+
+  background-color: white;
+
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#menu .section-content :nth-child(6) {
+  grid-template-rows: 200px;
+  grid-row: 4;
+  grid-column: 1 / span 2;
+}
+
+#menu .section-content :nth-child(6) img {
+  grid-column: 2;
+}
+
+#menu .section-content :nth-child(6) .description {
+  display: flex;
+  flex-direction: column;
+
+  background-color: #cce6c2;
+
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+}
+
+#menu .section-content :nth-child(7) {
+  grid-template-rows: repeat(2, 200px);
+  grid-template-columns: 200px;
+  grid-row: 1 / span 2;
+  grid-column: 4;
+}
+
+#menu .section-content :nth-child(7) img {
+  grid-column: 2;
+}
+
+#menu .section-content :nth-child(7) .description {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1;
+  grid-row: 1;
+
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  background-color: lightpink;
+}
+
+#events {
+  padding-bottom: 100px;
+}
+
+#services {
+  margin-left: 130px;
+  margin-right: 130px;
+  background-color: white;
+  border-left: dashed 1px green;
+  border-right: dashed 1px green;
+  padding-top: 20px;
+  padding-bottom: 200px;
+}
+
+#services .heading {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.section-content table tbody > :nth-child(1) {
+  content: "";
+  font-size: 0px;
+}
+
+.section-content table tbody tr :nth-child(1) {
+  font-family: "Calistoga";
+  text-decoration: none;
+  color: white;
+  padding-left: 10px;
+  padding-top: 30px;
+}
+
+.section-content table tbody tr :nth-child(2) {
+  font-family: "Spectral";
+  text-decoration: none;
+  color: white;
+  padding-left: 10px;
+  z-index: -1;
+  padding-top: 30px;
+}
+
+#services .section-content {
+  width: 80%;
+  overflow-x: hidden;
+  border-collapse: collapse;
+  list-style: none;
+  margin: 0 auto;
+  background-color: rgb(3, 3, 3);
+  padding: 50px;
+  background-image: url("../img/gang/heisenberg.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 50%;
+  box-shadow: #000000 0px 0px 15px;
+  opacity: 0.8;
+}
+
+#contact {
+  background: url("/img/bg/bg-contact.jpg");
+  background-size: cover;
+  background-position: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+#contact .heading h2 {
+  color: lightgreen;
+  display: block;
+  padding: 0px;
+}
+
+#contact .heading span {
+  color: white;
+  display: block;
+  padding-top: 0px;
+  margin-top: 0px;
+  font-family: "Textile";
+}
+
+#contact .heading {
+  padding-top: 10px;
+}
+
+#contact .section-content {
+  display: grid;
+
+  grid-template-rows: repeat(8, 70px);
+  grid-template-columns: 300px 500px;
+}
+
+#contact img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  max-width: 400px;
+  object-fit: cover;
+  object-position: center;
+  border: 5px solid white;
+
+  grid-row: 1 / span 5;
+}
+
+#contact blockquote {
+  grid-row: 1 / span 2;
+  grid-column: 2;
+  height: 100px;
+  padding: 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  align-content: left;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.references ul li a::before {
+  content: "\f005";
+  font-family: "Font Awesome 6 Free";
+  color: green;
+  padding-right: 5px;
+  visibility: visible;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.references ul {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+}
+
+.references li a {
+  font-size: 0;
+  text-decoration: none;
+  padding: 0 5px;
+}
+
+.references ul li a:hover::before {
+  content: "\f005";
+  font-family: "Font Awesome 6 Free";
+  color: #43d72c;
+  font-weight: 900;
+  font-size: 16px;
+  visibility: visible;
+  text-shadow: 0 0 10px #43d72c;
+}
+
+.references ul {
+  list-style-type: none;
+}
+
+#contact .section-content blockquote p {
+  font-family: "Spectral";
+  font-style: italic;
+  font-size: 15px;
+  text-align: left;
+  padding-bottom: 20px;
+  color: black;
+  margin: 0;
+}
+
+#contact .section-content blockquote span {
+  font-family: "Spectral";
+  font-style: italic;
+  font-size: 15px;
+  text-align: left;
+  color: black;
+  margin: 0;
+}
+
+#contact .contact-form {
+  display: flex;
+  grid-row: 3 / span 8;
+  grid-column: 2;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-top: 30px;
+  padding-left: 35px;
+  padding-right: 30px;
+  margin: 0;
+}
+
+#contact .contact-form form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact .contact-form form input {
+  opacity: 0.8;
+  border: 5px solid white;
+  background-color: rgba(255, 182, 193, 1);
+  margin-bottom: 20px;
+  padding: 8px 8px;
+  width: 90%;
+}
+
+#contact .contact-form form select {
+  opacity: 0.8;
+  border: 5px solid white;
+  background-color: rgba(210, 248, 210, 1);
+  margin-bottom: 20px;
+  padding: 8px 20px;
+  padding-left: 5px;
+  width: 96%;
+}
+
+#contact .contact-form form textarea {
+  opacity: 0.8;
+  border: 5px solid white;
+  background-color: rgba(210, 248, 210, 1);
+  margin-bottom: 20px;
+  padding: 8px 20px;
+  padding-left: 5px;
+  width: 88%;
+  resize: none;
+}
+
+#contact .contact-form form > :last-child {
+  opacity: 0.8;
+  border: 5px solid rgb(255, 136, 156);
+  background-color: rgba(255, 182, 193, 1);
+  margin-bottom: 20px;
+  padding: 8px 8px;
+  width: 30%;
+}
+
+#contact {
+  margin: 0;
+
+  border: 50px solid;
+  box-sizing: border-box;
+  border-image: url("/img/custom/hr.svg");
+  border-image-slice: 100;
+  border-image-repeat: round;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+footer {
+  background-color: white;
+  margin-left: 130px;
+  margin-right: 130px;
+  background-repeat: no-repeat;
+  border-left: dashed 1px green;
+  border-right: dashed 1px green;
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  margin-bottom: 0;
+}
+
+footer .section-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+footer a,
+footer span {
+  text-decoration: none;
+  font-weight: 900;
+}
+
+body a i {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  margin: 10px;
+  justify-content: right;
+  justify-self: right;
+  width: 70px;
+  height: 70px;
+  box-shadow: 0 0 10px green;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+body a :hover {
+  transition: 0.1s;
+  background-color: rgba(0, 128, 0, 0.8);
+}
+
+body a ::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "\f062";
+  font-family: "Font Awesome 6 Free";
+  font-size: 30px;
+  color: green;
+  padding-top: 20px;
+}
+
+body a:hover::before {
+  color: white;
+}
+
+@font-face {
+  font-family: "Textile";
+  src: url("/fonts/textile.ttf") format("truetype");
+}
